@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Document</title>
+       <style>
+              body {
+                     padding: 0;
+                     margin: 0;
+                     display: flex;
+                     justify-content: center;
+                     align-items: center;
+                     height: 100vh;
+                     width: 100vw;
+              }
+
+              article {
+                     display: ruby-text;
+                     margin: auto auto;
+              }
+
+              .marquee-parent {
+                     border: 1px solid black;
+                     width: 400px;
+                     height: 400px;
+                     border-radius: 30px;
+              }
+
+              .box-p {
+                     position: relative;
+                     top: 0;
+              }
+
+              .box1 {
+                     width: 100px;
+                     height: 100px;
+                     background-color: aqua;
+                     border-radius: 100%;
+              }
+
+              @media only screen and (max-width:572px) {
+                     .marquee-parent {
+                            border: 1px solid black;
+                            width: 300px;
+                            height: 300px;
+                            border-radius: 30px;
+                     }
+
+                     .box1 {
+                            width: 50px;
+                            height: 50px;
+                            background-color: aqua;
+                            border-radius: 100%;
+                     }
+              }
+       </style>
+</head>
+
+<body>
+
+       <article>
+              <!-- 
+                     The different attributes of <marquee> tag are:
+                            width	:[number]
+                            height	:[number]
+                            direction :[top , right , left , down]	
+                            scrolldelay	: provides a feature whose value will be used for delaying each jump. 
+                            scrollamount	:provides value for speeding the marquee feature 
+                            behavior :provides the scrolling type in a marquee. That scrolling can be like [sliding, scrolling, or alternate]
+                            loop	:provides how many times the marquee will loop
+                            bgcolor :provides a background color where the value will be either the name of the color or the hexadecimal color code.
+                            vspace	:provides a vertical space, and its value can be like vspace="20" or vspace="30%"
+                            hspace	:provides a horizontal space, and its value can be like hspace="20" or hspace="30%"
+               -->
+              <marquee behavior="alternate" direction="up" class="marquee-parent">
+                     <marquee behavior="alternate" class="marquee-child-1" scrollamount="100" scrolldelay="300">
+                            <div class="box-p">
+                                   <div class="box1"></div>
+                            </div>
+                     </marquee>
+              </marquee>
+       </article>
+
+
+</body>
+
+</html>
