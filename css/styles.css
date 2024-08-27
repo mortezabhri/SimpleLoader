@@ -12,6 +12,7 @@ body {
 article {
        display: ruby-text;
        margin: auto auto;
+       transform: rotate(45deg);
 }
 
 .marquee-parent {
